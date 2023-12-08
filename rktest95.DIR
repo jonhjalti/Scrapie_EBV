@@ -1,0 +1,158 @@
+#**********************************************************************
+# This is the file DMU1 read from standard input                      *
+#                                                                     *
+# Lines starting with # are lines with information's                  *
+# on how and what to fill in.                                         *
+#                                                                     *
+# Lines starting with $ are KEYWORD lines used to locate              *
+# information's in this file.                                         *
+#                                                                     *
+#**********************************************************************
+#
+#----------------------------------------------------------------------
+# COMMENT section
+#
+# Syntax: $COMMENT 
+# The $COMMENT keyword can be followed by up to 10 lines of comments.
+# They will be put in the listing file
+#
+$COMMENT
+Prufa a riðuarfgerðakynbótamati. Nota DM5 með h2=0,99
+
+#----------------------------------------------------------------------
+#ANAYLSE section
+#
+# Syntax: $ANALYSE task method scaling testprint
+# where : task      =  1 -> REML estimation of (co)variance components
+#                           using DMUAI
+#                   = 11 -> BLUE and BLUP using DMU4
+#         method    = method used for computation (see User's Guide)
+#         scaling  /=  0 -> no scaling
+#                   =  1 -> scaling to unit residual variance
+#                           estimate parameters and effects are
+#                           scaled back to the original scale
+#         testprint =  0 -> standard amount of output
+#                      1 -> standard output plus lists of all class
+#                           levels and the number of observations
+#                           in each level 
+#                      2 -> As 1 plus additional test output.
+#                           WARNING: this option may generate large
+#                                    volumes of output
+
+$ANALYSE 12 2 0 0
+#----------------------------------------------------------------------
+# DATA section 
+#
+# Syntax: $DATA FMT (#int,#real,miss) fn [fn2] 
+# where : FMT    = ASCII or BINARY
+#         #int   = no. of integer variables
+#         #real  = no. of real variables
+#         miss   = reals below this value are regarded as missing
+#         fn     = name of the data files.
+#                  Starting with "/" => full path and name
+#                  otherwise relative to current directory
+#         fn2    = if specified, integer part is in fn,
+#                  and real part is in fn2    
+
+$DATA  ASCII (2,4,-99) phenotypes_train.txt
+ 
+#----------------------------------------------------------------------
+# VARIABLE section
+#
+# Syntax: $VARIABLE                            
+# On the following lines You can give names to the variables
+# in the input data. The variable names will occure in the 
+#
+# The variable names can be up to 8 characters long
+#
+# If no variable names is given, the variables will be named
+# I1-I#int and R1-R#real
+# where : #int   = no. of integer variables
+#         #real  = no. of real variables
+#
+# The variable names will occure in the printout from DMU
+#
+
+$VARIABLE
+ID einn
+ S1 S2 S3 S4 
+# MODEL section
+# 
+# Syntax: $MODEL [fn] 
+#  
+# where   fn     = optional.
+#                  Starting with "/" => full path and name
+#                  otherwise relative to current directory
+#                  If specified, model directive is read from fn.
+#                  Otherwise model directives are read from lines
+#                  following the $MODEL keyword
+
+$MODEL
+4                                                                               
+0                                                                               
+0  
+0
+0                                                                             
+1 0 2 2 1                                                        
+2 0 2 2 1
+3 0 2 2 1
+4 0 2 2 1                                                        
+1                                                                       
+1
+1       
+1                                                                
+0
+0
+0
+0
+0
+#----------------------------------------------------------------------
+# (Co)variance structure section
+# 
+# At present, structure can only be put on genetic effect
+#  
+# Syntax: $VAR_STR random_effect_no. type method  FMT fn 
+# where : number = structure number, used to associate (co)variance
+#                  structure to random effects in the model section
+#         type   = Structur type. At present only PED is allowed
+#         method = methode within type. (For PED 1-6)
+#         FMT    = ASCII or BINARY
+#         fn     = name of the data files.
+#                  Starting with "/" => full path and name
+#                  otherwise relative to current directory
+ 
+$VAR_STR  1 PED 2 ASCII ../pedout.txt
+   
+#----------------------------------------------------------------------
+# PRIOR section
+# 
+# Syntax: $PRIOR [fn] 
+# where   fn     = optional.
+#                  Starting with "/" => full path and name
+#                  otherwise relative to current directory
+#                  If specified, model directive is read from fn.
+#                  Otherwise priors are read from lines
+#                  following the $PRIOR keyword
+$PRIOR
+  1  1  1  0.255    
+  1  2  1 -0.015
+  1  2  2  0.095  
+  1  3  1 -0.003
+  1  3  2 -0.001
+  1  3  3  0.0198
+  1  4  1  -0.0003
+  1  4  2  -0.0001
+  1  4  3  -0.00002
+  1  4  4  0.002
+  2  1  1  0.0134
+  2  2  1  0.0
+  2  2  2  0.005
+  2  3  1  0.00
+  2  3  2  0.00
+  2  3  3  0.001
+  2  4  1  0
+  2  4  2  0
+  2  4  3  0
+  2  4  4  0.0001
+  
+$SOLUTION
