@@ -1,0 +1,8 @@
+hunter3    7  0    0   8
+hunter5    9  2    0   17
+Billinis   9  8    88  22
+Hagenaars  21  36  54  1828
+Stefania   13  7    42  246
+Tranulis1  20  3   1   11
+Belt       3   0   3   10
+Baylis     307 125 290 1695

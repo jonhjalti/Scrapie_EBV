@@ -1,0 +1,10 @@
+hunter2    0  17    0   3
+hunter3    0  3    0   8
+hunter5    0  4    0   17
+Billinis   15 23    88  22
+Hagenaars  1  191  54  1828
+Harrington 0  28  71  765
+Stefania   0  17    42  246
+Tranulis1  0  7   1   11
+Tranulis2  0  5    0   9
+Baylis     36 875 290 1695

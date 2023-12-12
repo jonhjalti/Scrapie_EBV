@@ -1,0 +1,5 @@
+VaccariA   0   7   23   54
+VaccariB   0   10  31   36
+VaccariC   0   14  48   7
+VaccariD   0   10  39   59
+VaccariE   0   13  7    18

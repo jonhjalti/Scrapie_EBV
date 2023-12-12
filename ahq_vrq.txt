@@ -1,0 +1,5 @@
+hunter2    0  29    0   3
+Billinis   15 23    88  22
+Hagenaars  2  24  54  1828
+Tranulis1  0  3   1   11
+Baylis     1  347 290 1695

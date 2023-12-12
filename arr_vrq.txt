@@ -1,0 +1,10 @@
+hunter2    0  23    0   3
+hunter3    0  3    0   8
+hunter5    0  7    0   17
+hunter7    0  3    2   2
+Hagenaars  24 851  54  1828
+Harrington 0  42  71  765
+Tranulis1  0  11   1   11
+Belt       1  4   3   10
+Acin       0  3   90  220
+Baylis     39 292 290 1695
