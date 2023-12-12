@@ -9,3 +9,7 @@ fromsol_8.f95 reads the solutions files from dmu and creates files with predicte
 rktest90.DIR is an input file for DMU5 for assumed heritability=0.90
 rktest95.DIR is an input file for DMU5 for assumed heritability=0.95
 rktest99.DIR is an input file for DMU5 for assumed heritability=0.99
+
+meta1.R contains R codes used in the meta-analysis
+Text file ahq_ahq.txt and similar names refering to PRNP genotypes have numbers from case-control studies. 
+The columns are: paper, scrapie cases AHQ/AHQ, healthy AHQ/AHQ, scrapie cases ARQ/ARQ, healthy ARQ/ARQ 
