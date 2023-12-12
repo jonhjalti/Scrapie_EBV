@@ -11,5 +11,9 @@ rktest95.DIR is an input file for DMU5 for assumed heritability=0.95
 rktest99.DIR is an input file for DMU5 for assumed heritability=0.99
 
 meta1.R contains R codes used in the meta-analysis
-Text file ahq_ahq.txt and similar names refering to PRNP genotypes have numbers from case-control studies. 
+Text file ahq_ahq.txt have numbers from case-control studies. 
 The columns are: paper, scrapie cases AHQ/AHQ, healthy AHQ/AHQ, scrapie cases ARQ/ARQ, healthy ARQ/ARQ 
+Other files with similar names refering to PRNP genotypes have the same information for other genotypes
+
+accuracy_allelecont_10.R has R code used to calculate accuracy and dispersion for predicting allele content
+accuracy_EBV_10.R has R code used to calculate accuracy and dispersion for the EBVs
